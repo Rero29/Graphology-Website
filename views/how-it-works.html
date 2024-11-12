@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="mb-24 flex min-h-screen flex-col bg-black">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Content -->
+    <section
+      id="how-it-works"
+      class="flex w-full flex-col items-center gap-y-4 overflow-hidden p-4"
+    >
+      <div class="p-2 text-center">
+        <h1
+          class="font-Koulen text-2xl tracking-wider text-textColor md:text-3xl"
+        >
+          How It Works?
+        </h1>
+        <br />
+        <p class="font-Outfit text-lg text-PrimaryBG md:text-xl">
+          <b>Decoding the plot twists in your handwriting</b>
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div
+        id="process"
+        class="container relative m-12 flex w-full flex-col gap-y-4 md:gap-y-8 lg:gap-y-12"
+      >
+        <div
+          class="flex flex-col rounded-lg p-2 md:flex-row md:gap-x-4 lg:-translate-x-24"
+        >
+          <div class="flex flex-col gap-y-4 p-4 md:p-8">
+            <div class="flex gap-x-4 md:gap-x-8">
+              <span
+                class="font-Outfit text-xl font-extrabold text-green-500 md:text-2xl"
+                >#1</span
+              >
+              <h2
+                class="font-Koulen text-2xl tracking-wide text-textColor md:text-3xl"
+              >
+                Upload Your Handwriting
+              </h2>
+            </div>
+            <!-- para div -->
+            <div>
+              <p class="font-Outfit text-base text-PrimaryBG md:text-xl">
+                Simply take a clear photo or scan of your handwriting and upload
+                it through our secure platform. The image should be well-lit,
+                with each letter visible and free of smudges for the most
+                accurate results.
+              </p>
+            </div>
+          </div>
+          <div class="w-[900px] rounded-lg p-0">
+            <img
+              src="../images/image (5).png"
+              class="h-full w-full max-w-xs rounded-lg md:max-w-md lg:max-w-lg"
+              alt="Upload Your Handwriting"
+            />
+            <!-- Image div -->
+          </div>
+        </div>
+        <!-- **************** -->
+
+        <div
+          class="flex flex-col rounded-lg md:flex-row-reverse md:gap-x-4 lg:translate-x-24"
+        >
+          <div class="flex flex-col gap-y-4 p-4 md:p-8">
+            <div class="flex gap-x-4 md:gap-x-8">
+              <span
+                class="font-Outfit text-xl font-extrabold text-green-500 md:text-2xl"
+                >#2</span
+              >
+              <h2
+                class="font-Koulen text-2xl tracking-wide text-textColor md:text-3xl"
+              >
+                Processing Your Handwriting
+              </h2>
+            </div>
+            <!-- para div -->
+            <div>
+              <p class="font-Outfit text-base text-PrimaryBG md:text-xl">
+                Once uploaded, our advanced AI begins processing. Through a
+                series of steps—such as enhancing contrast, removing background
+                noise —our system prepares your handwriting for detailed
+                analysis.
+              </p>
+            </div>
+          </div>
+          <div class="w-[900px] rounded-lg p-0">
+            <img
+              src="../images/image(6).png"
+              class="mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg"
+              alt="Analyze Your Handwriting"
+            />
+            <!-- Image div -->
+          </div>
+        </div>
+        <!-- ****************** -->
+        <div
+          class="flex flex-col rounded-lg p-2 md:flex-row md:gap-x-4 lg:-translate-x-24"
+        >
+          <div class="flex flex-col gap-y-4 p-4 md:p-8">
+            <div class="flex gap-x-4 md:gap-x-8">
+              <span
+                class="font-Outfit text-xl font-extrabold text-green-500 md:text-2xl"
+                >#3</span
+              >
+              <h2
+                class="font-Koulen text-2xl tracking-wide text-textColor md:text-3xl"
+              >
+                Model Development
+              </h2>
+            </div>
+            <!-- para div -->
+            <div>
+              <p class="font-Outfit text-base text-PrimaryBG md:text-xl">
+                A structured workflow uses an advanced language model (Mistral
+                7B) to analyze the handwriting. This model interprets subtle
+                aspects of handwriting, such as spacing, slant, and size, to
+                infer psychological traits.
+              </p>
+            </div>
+          </div>
+          <div class="w-[900px] rounded-lg p-0">
+            <img
+              src="../images/mistral.png"
+              class="mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg"
+              alt="Analyze Your Handwriting"
+            />
+            <!-- Image div -->
+          </div>
+        </div>
+        <!-- ************* -->
+        <div
+          class="flex flex-col rounded-lg md:flex-row md:gap-x-4 lg:translate-x-24"
+        >
+          <div class="flex flex-col gap-y-4 p-4 md:p-8">
+            <div class="flex gap-x-4 md:gap-x-8">
+              <span
+                class="font-Outfit text-xl font-extrabold text-green-500 md:text-2xl"
+                >#4</span
+              >
+              <h2
+                class="font-Koulen text-2xl tracking-wide text-textColor md:text-3xl"
+              >
+                Feature Analysis
+              </h2>
+            </div>
+            <!-- para div -->
+            <div>
+              <p class="font-Outfit text-base text-PrimaryBG md:text-xl">
+                Specific handwriting features are extracted using OpenCV2 and
+                Python-based image processing techniques. These methods allow
+                for precise, mathematical measurement of characteristics in the
+                handwriting, such as line thickness, pressure, and letter
+                formation.
+              </p>
+            </div>
+          </div>
+          <div class="w-[900px] rounded-lg p-0">
+            <img
+              src="../images/analysis.png"
+              class="mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg"
+              alt="Analyze Your Handwriting"
+            />
+            <!-- Image div -->
+          </div>
+        </div>
+        <!-- ********** -->
+        <div
+          class="flex flex-col rounded-lg md:flex-row md:gap-x-4 lg:-translate-x-24"
+        >
+          <div class="flex flex-col gap-y-4 p-4 md:p-8">
+            <div class="flex gap-x-4 md:gap-x-8">
+              <span
+                class="font-Outfit text-xl font-extrabold text-green-500 md:text-2xl"
+                >#5</span
+              >
+              <h2
+                class="font-Koulen text-2xl tracking-wide text-textColor md:text-3xl"
+              >
+                Report Generation
+              </h2>
+            </div>
+            <!-- para div -->
+            <div>
+              <p class="font-Outfit text-base text-PrimaryBG md:text-xl">
+                Finally, the language model compiles the analysis into a PDF
+                report. This report is generated with LLM’s capabilities,
+                providing detailed and personalized feedback on the
+                psychological traits inferred from the handwriting.
+              </p>
+            </div>
+          </div>
+          <div class="w-[900px] p-0">
+            <img
+              src="../images/5.png"
+              class="mx-auto w-full max-w-xs md:max-w-md lg:max-w-lg"
+              alt="Analyze Your Handwriting"
+            />
+            <!-- Image div -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

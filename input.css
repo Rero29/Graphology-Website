@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#process {
+  padding: 16px; /* Adjust as needed */
+  box-sizing: border-box; /* Ensures padding doesn’t increase width */
+  width: 100%; /* Ensures it resizes with screen */
+}
+
+.container > div {
+  max-width: 100%;
+  overflow: hidden; /* Prevents spilling */
+}
+
+#menu a {
+  color: #f7cfb4;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+#menu img {
+  width: 60%;
+}
+#menu a:last-child {
+  border-bottom: none;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 32px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    height 0.5s ease,
+    opacity 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 10;
+  padding-top: 4rem;
+}
+
+#menu.show {
+  height: 100vh;
+  opacity: 1;
+}
+
+#menu-btn {
+  position: relative;
+  z-index: 20;
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-mid,
+.hamburger-bot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-mid {
+  transform: translateY(7px);
+}
+
+.hamburger-bot {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-mid {
+  display: none;
+}
+
+.open .hamburger-bot {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* Base circle styling */
+//A trick to clip content and adjust height to fix 
+.circle-container {
+  overflow: hidden;
+  height: auto;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 60%;
+  opacity: 0;
+  transform: translateX(-50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 70%;
+}
+
+.circle-container-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: max-content;
+}
+
+.caption {
+  opacity: 0;
+  transform: translateY(10px);
+}
+/* Caption styles */
+.caption h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+}
+
+/* Animations */
+/* Default Animation: Slide in from Left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Default Animation: Slide in from Left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.circle-container-item:nth-child(1) .circle,
+.circle-container-item:nth-child(1) .caption {
+  animation: slideInLeft 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.circle-container-item:nth-child(2) .circle,
+.circle-container-item:nth-child(2) .caption {
+  animation: slideInLeft 1.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+.circle-container-item:nth-child(3) .circle,
+.circle-container-item:nth-child(3) .caption {
+  animation: slideInLeft 1.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* Responsive Animation for Medium and Below */
+@media (max-width: 768px) {
+  @keyframes slideInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .circle-container-item:nth-child(1) .circle,
+  .circle-container-item:nth-child(1) .caption {
+    animation: slideInTop 1.5s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+  .circle-container-item:nth-child(2) .circle,
+  .circle-container-item:nth-child(2) .caption {
+    animation: slideInTop 1.5s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+  .circle-container-item:nth-child(3) .circle,
+  .circle-container-item:nth-child(3) .caption {
+    animation: slideInTop 1.5s ease-out forwards;
+    animation-delay: 0.6s;
+  }
+}
+
+/* Define the crayon-like animation */
+@keyframes crayonFill {
+  0% {
+    background-size: 0 100%;
+    background-position: 100% 0;
+  }
+  100% {
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+}
+
+/* Apply the crayon effect when hovering over a .step element */
+.step {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.step:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4caf50; /* Green color */
+  z-index: -1; /* Place behind the content */
+  animation: crayonFill 0.8s ease forwards; /* Apply the animation */
+}

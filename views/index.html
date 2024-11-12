@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="bg-black">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Container -->
+      <div
+        class="container mx-auto mt-10 flex flex-col items-center space-y-0 px-6 pt-3 md:flex-row-reverse md:space-y-0"
+      >
+        <!-- Text Content -->
+        <div class="my-4 flex flex-col space-y-6 px-3 md:w-1/2">
+          <h1
+            class="max-w-md text-center font-Koulen text-4xl font-bold text-textColor md:text-left md:text-5xl"
+          >
+            Let Your Handwriting Speak:
+          </h1>
+          <h2
+            class="max-w-md text-center font-Koulen text-4xl font-bold text-PrimaryBG md:text-left md:text-3xl"
+          >
+            Discover the Secrets of Your Inner Self
+          </h2>
+          <!-- Paragraph -->
+          <p
+            class="max-w-md text-center font-Outfit text-PrimaryBG sm:text-2xl md:text-left md:text-xl"
+          >
+            Our <u>AI-driven platform</u> transforms your samples into
+            <u>personalized insights</u> about your personality & emotional
+            state. <br />Upload your writing, and discover what your
+            subconscious is saying.
+          </p>
+
+          <!-- CTA button -->
+          <div class="flex justify-center md:justify-start">
+            <a
+              href="http://127.0.0.1:5000/"
+              class="baseline rounded-full bg-SecondaryBG p-3 px-6 pt-2 font-Koulen text-2xl text-textColor transition duration-300 hover:bg-textColor hover:text-SecondaryBG"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="md:w-1/2">
+          <img src="/images/man.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Foooter -->
+    <br />
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      const currentPage = window.location.pathname;
+      const linkMap = {
+        "index.html": "home-link",
+        "how-it-works.html": "how-link",
+        "upload.html": "upload-link",
+        "about.html": "about-link",
+      };
+      const activeLinkId = linkMap[currentPage];
+      if (activeLinkId) {
+        const activeLink = document.getElementById(activeLinkId);
+        activeLink.classList.add("text-SecondaryBG");
+        activeLink.style.color = "#4F6547";
+        activeLink.querySelector("span").classList.add("max-w-full");
+      }
+    </script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

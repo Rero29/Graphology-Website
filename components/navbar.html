@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<nav class="container relative mx-auto p-4  text-xl text-textColor font-Koulen">
+    <div class="flex items-center justify-between">
+      <div class="">
+        <img src="/images/Logo2.png" alt="PsyFer" / class="w-32 h-auto">
+      </div>
+      <div class="hidden space-x-6 md:flex">
+        <a href="http://127.0.0.1:5500/views/index.html" id="home-link" class="group text-textColor transition duration-300 hover:text-SecondaryBG">
+          HOME
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-SecondaryBG"></span>
+        </a>
+        <a href="http://127.0.0.1:5500/views/how-it-works.html" id="how-link" class="group text-textColor transition duration-300 hover:text-SecondaryBG id=">
+          HOW IT WORKS
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-SecondaryBG"></span>
+        </a>
+        <a href="http://127.0.0.1:5000/" id="upload-link" class="group text-textColor transition duration-300 hover:text-SecondaryBG">
+          UPLOAD
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-SecondaryBG"></span>
+        </a>
+        <a href="http://127.0.0.1:5500/views/about-us.html" id="about-link" class="group text-textColor transition duration-300 hover:text-SecondaryBG">
+          ABOUT US
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-SecondaryBG"></span>
+        </a>
+      </div>
+      <a href="http://127.0.0.1:5000/" class="hidden md:block p-3 px-4 pt-2 bg-SecondaryBG text-textColor rounded-full baseline hover:bg-textColor hover:text-SecondaryBG transition duration-300">Get Started</a>
+
+      <!-- Hamburger menuu -->
+       <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-mid"></span>
+        <span class="hamburger-bot"></span>
+       </button>
+    </div>
+
+    <!-- Mobile menu -->
+     <div class="md:hidden">
+      <div id="menu" class="absolute tracking-wide flex-col hidden items-center self-end py-8 mt-10 space-y-6 font-bold bg-black sm:w-auto sm:self-center left-6 right-6 drop-shadow-m">
+        <a href="/views/index.html" >HOME</a>
+        <a href="/views/how-it-works.html">HOW IT WORKS</a>
+        <a href="http://127.0.0.1:5000/">UPLOAD</a>
+        <a href="/views/about-us.html">ABOUT US</a>
+        <img src="/images/Logo2.png" alt=""  class="w-32 h-auto">
+      </div>
+     </div>
+  </nav>
+
+  <script>
+    const currentPage = window.location.pathname;
+      const linkMap = {
+        "http://127.0.0.1:5000/views/index.html": "home-link",
+        "http://127.0.0.1:5000/views/how-it-works.html": "how-link",
+        "http://127.0.0.1:5000/": "upload-link",
+        "http://127.0.0.1:5000/views/about.html": "about-link",
+      };
+      const activeLinkId = linkMap[currentPage];
+      if (activeLinkId) {
+        const activeLink = document.getElementById(activeLinkId);
+        activeLink.classList.add("text-SecondaryBG");
+        activeLink.style.color = "#4F6547";
+        activeLink.querySelector("span").classList.add("max-w-full");
+      }
+
+
+  </script>
