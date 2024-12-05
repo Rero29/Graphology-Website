@@ -27,10 +27,10 @@ Graphology is the study of handwriting to infer a person’s personality traits,
 # Screenshots
 _The website was designed with a mobile-first approach_
   1. Mobile
-     - ![Landing page ](snapshots/landing_page_mobile.jpg)
+     - ![Landing page ](snapshots/landing_page_mobile.png)
      - ![How it works page ](snapshots/how-it-works_mobile.jpg)
      - ![Upload page ](snapshots/upload_mobile.jpg)   
   2. Desktop
-     - ![Landing page ](snapshots/landing_page_desktop.jpg)
+     - ![Landing page ](snapshots/landing_page_desktop.png)
      - ![How it works page ](snapshots/how-it-works_desktop.jpg)
      - ![Upload page ](snapshots/upload_desktop.jpg)       
