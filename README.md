@@ -15,8 +15,8 @@ Graphology is the study of handwriting to infer a person’s personality traits,
      `git clone https://github.com/yourusername/graphology-project.git`
   2. Install dependencies
      ```bash
-    npm install
-    pip install -r requirements.txt
+     npm install
+     pip install -r requirements.txt
   3. Set up .env file for Mistral API key
   4. start development server
      ```bash
