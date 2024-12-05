@@ -1063,7 +1063,6 @@ video {
 
 /* Base circle styling */
 
-//A trick to clip content and adjust height to fix 
 .circle-container {
   overflow: hidden;
   height: auto;
